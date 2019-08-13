@@ -1,0 +1,331 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>LaTeX4Web 1.4 OUTPUT</title>
+<style type="text/css">
+<!--
+ body {color: black;  background:"#FFCC99";  }
+ div.p { margin-top: 7pt;}
+ td div.comp { margin-top: -0.6ex; margin-bottom: -1ex;}
+ td div.comb { margin-top: -0.6ex; margin-bottom: -.6ex;}
+ td div.norm {line-height:normal;}
+ td div.hrcomp { line-height: 0.9; margin-top: -0.8ex; margin-bottom: -1ex;}
+ td.sqrt {border-top:2 solid black;
+          border-left:2 solid black;
+          border-bottom:none;
+          border-right:none;}
+ table.sqrt {border-top:2 solid black;
+             border-left:2 solid black;
+             border-bottom:none;
+             border-right:none;}
+-->
+</style>
+</head>
+<body>
+Assessing the likelihood that Brian Boquist created an Ashley 
+Madison Account 
+
+In this note, we examine an account found in the 2015 
+Ashley Madison data dump and determine that there is high probability 
+that the account was created by Brian Boquist.  The Oregon State Senator
+ has made news recently by making threats to fellow members of Oregon 
+Senate, saying that ``hell would visit them personally.<font face="symbol">¢</font><font face="symbol">¢</font>
+  He has since made several public statements justifying this language 
+by refering to Catholic faith, including statements in a lawsuit which 
+attest to faith, consequences of sin, and the duty to call out the 
+sinner.  
+Even with generous assumptions, we estimate that the probability that 
+someone other than Sen. Boquist created the account is less than 1\%.  
+
+\endabstract
+
+<p><a name="toc.1"></a></p><h1><a name="toc.1">1&nbsp;Background</a></h1><a name="toc.1">
+In June 2019, the Democratic Majority in the Oregon Senate attempted to 
+pass a cap-and-trade bill.  Oregon Senate requires a quorum, so Senate 
+Republicans declared their intention to leave the capitol and prevent 
+the legislative session from moving forward.  Oregon Governor Kate Brown
+ indicated that she would be using the powers granted by the Oregon 
+Constitution to ``compel<font face="symbol">¢</font><font face="symbol">¢</font>
+ the senators to return: up to and including sending Oregon State Police
+ after the senators.  Sen. Boquist, a military veteran who is known to 
+carry guns, responded with the statement ``send bachelors, and come 
+heavily armed.<font face="symbol">¢</font><font face="symbol">¢</font>  
+He also told Senate President Peter Courtney that ``If you send the 
+state police to get me, hell is coming to visit you personally.<font face="symbol">¢</font><font face="symbol">¢</font>
+The Republican senators fled to Idaho and did not return until the 
+cap-and-trade bill was dropped from the agenda.  Upon returing, an 
+assessment was made that the threats made by Sen. Boquist should be 
+taken seriously. A senate committee decided to require that Boquist give
+ 12 hour notice before visting Salem.  
+
+Boquist then made statements justifying his language : ``send 
+bachelors...<font face="symbol">¢</font><font face="symbol">¢</font> is 
+ simply an old military expression.  The statement to President 
+Courtney, however, came from their shared Catholic faith.  Boquist made 
+several references to his faith in memos and in a lawsuit filed against 
+Courtney and others </a><a href="#bib.0">[0]</a>.
+
+In 2015, hackers orchestrated a well-publicized data dump of the Ashley 
+Madison website. Ashley Madison did not require users to use their 
+names, but did keep track of credit card data.   At the time, many of 
+the users were <font face="symbol">¢</font>doxxed<font face="symbol">¢</font> because their names were on credit card transactions, others were <font face="symbol">¢</font>doxxed<font face="symbol">¢</font>
+ because they had short-sightedly used their identifiable work email 
+address when setting up the account.   However, a large portion of the 
+user accounts remained unlinked.
+
+Despite the fact that accounts may not contain names, or identifiable 
+email addresses, some accounts can be linked with high probability to 
+individuals: The date-of-birth, zipcode, height, wieght, and security 
+question and answer in some cases can specify the individual uniquely 
+with reasonable probability.   
+
+An account exists in the Ashley Madison database that matches Sen 
+Boquist<font face="symbol">¢</font>s zipcode, date of birth, place of 
+work, (by our estimation) approximate height and wieght, and most 
+significantly, his high school.  
+We will argue first that there is little probability that this account 
+was created by someone else.  Next, we will argue that this is an issue 
+that should be brought to the attention of, at the very least the court 
+hearing the case <a href="#bib.0">[0]</a>, and perhaps even the general public. 
+
+<p><a name="toc.2"></a></p><h1><a name="toc.2">2&nbsp;The account</a></h1><a name="toc.2">
+
+We grepped the file \beginverbatim ``am_am.dump<font face="symbol">¢</font><font face="symbol">¢</font>
+ \endverbatim  using python.  This file is the dump of an SQL database. 
+ Reading the file as a string, the headers are given in positions 
+[1003:3140].   The account in question occurs in position 
+[2774910130:2774910456] and is the following string :
+
+
+
+
+\beginverbatim
+(8152436,<font face="symbol">¢</font>2011-01-24 02:57:40<font face="symbol">¢</font>,0,
+<font face="symbol">¢</font>2011-11-06 01:09:20<font face="symbol">¢</font>,0,2,2,NULL,NULL,0,
+NULL,NULL,NULL,NULL,NULL,NULL,
+<font face="symbol">¢</font>Salem<font face="symbol">¢</font>,<font face="symbol">¢</font>97338<font face="symbol">¢</font>,38,44.8440933,-123.4564094,1,
+NULL,NULL,NULL,2,<font face="symbol">¢</font>1958-10-20<font face="symbol">¢</font>,<font face="symbol">¢</font>Hey<font face="symbol">¢</font>,1,
+79380,178,4,1,0,1,2,<font face="symbol">¢</font>
+|7|40|38|36|28|42|43|<font face="symbol">¢</font>,<font face="symbol">¢</font><font face="symbol">¢</font>,<font face="symbol">¢</font><font face="symbol">¢</font>,<font face="symbol">¢</font>
+|30|38|42|44|45|18|48|49|10|11|<font face="symbol">¢</font>,<font face="symbol">¢</font><font face="symbol">¢</font>,
+<font face="symbol">¢</font><font face="symbol">¢</font>,<font face="symbol">¢</font>|48|47|56|57|67|70|73|<font face="symbol">¢</font>,<font face="symbol">¢</font><font face="symbol">¢</font>,<font face="symbol">¢</font><font face="symbol">¢</font>,
+NULL,2,<font face="symbol">¢</font>Tillamook<font face="symbol">¢</font>)
+\endverbatim
+
+With this in hand, we grepped the file \beginverbatim 
+"aminno_member_email.dump" \endverbatim and 
+\beginverbatim"aminno_member.dump" \endverbatim and determined that the 
+email address ``TrueOregon@aol.com<font face="symbol">¢</font><font face="symbol">¢</font> was associated to account 8152436 as well as the ip address <font face="symbol">¢</font>206.212.234.92<font face="symbol">¢</font> and the username	<font face="symbol">¢</font>paradise06<font face="symbol">¢</font>.
+
+The zipcode 97338 is given as Boquists on numerous documents going back well before 2011, and including the complaint </a><a href="#bib.0">[0]</a>.
+
+It is crucial to note that the final two fields in the first table are 
+security question and answer: Security question # 2 corresponds to name 
+of high school.  (This can be confirmed by inspecting other answers as 
+well as other sources on the internet.)  The fields containing ``79380<font face="symbol">¢</font><font face="symbol">¢</font> and ``178<font face="symbol">¢</font><font face="symbol">¢</font> are wieght and height in metric units. 
+
+
+
+<p><a name="toc.3"></a></p><h1><a name="toc.3">3&nbsp;Analysis of the account</a></h1><a name="toc.3">
+We begin with some extremely rough ways to estimate the probability that
+ this account was created by someone other than Sen. Boquist as a warmup
+ and then attempt to build a more thorough model. 
+We will assume that the data given is not falsified. While certainly 
+some accounts were created with falsified information, the motivation 
+for intentionally matching Boquist<font face="symbol">¢</font>s data is 
+unclear.  It is also remotely possible that someone chose the data at 
+random: Perhaps the security question was correct, but the birthday or 
+zipcode was chosen and random.  We<font face="symbol">¢</font>re going to ignore these possibilities. 
+
+</a><p><a name="toc.3"></a><a name="toc.3.1"></a></p><h2><a name="toc.3.1">3.1&nbsp;First rough estimation: birthdate and current zipcode</a></h2><a name="toc.3.1">
+Quickly searching cf. </a><a href="#bib.1">[1]</a> we find that as of 2010, there were 20045 people in the zipcode, of which approximately 9722 are male.  More searching cf. <a href="#bib.2">[2]</a>
+ turns up 2016 data that  12.2 \% of males are age 45-55 and 11.3 in the
+ next age group 55-65.   We will use this number to guess that there are
+ approximately 12 percent of the 9722 males are born in this decade, 
+that is, about 1167 males born in this decade.  Dividing this by 10 
+years in the decade, for simplicity, we would guess that about 117 male 
+residents of zipcode 97338 were born in 1958.  
+Treating this as a Poisson distribution with <font face="symbol">l</font> = 117/365 we conclude there is a 72.5\% chance that nobody else matches this birthday/zipcode criteria.
+
+<p><a name="toc.3.2"></a></p><h2><a name="toc.3.2">3.2&nbsp;Second rough estimation: birthdate and Tillamook High School</a></h2><a name="toc.3.2">
+
+Recent data says the enrollment and Tillamook high school is around 600.
+  We can find data from the 1990s in Oregon Dropout Rate Reports with 
+Enrollment as high as 784.   We will be generous, and allow for 800, or 
+approximately 200 per class, and assume the four year dropout rate was 
+about 20\%.  See </a><a href="#bib.3">[3]</a>.  So 160 is a generous 
+upper bound on the number of graduates per year.  Dividing by 2, for 
+males, we get about 80 males per year.  
+Treating this as a Poisson distribution with <font face="symbol">l</font> = 80/365 We conclude there is a 80\% chance that nobody else matches this birthday/high school criteria.
+
+
+<p><a name="toc.3.3"></a></p><h2><a name="toc.3.3">3.3&nbsp;Combining birthday with geographic mobility</a></h2><a name="toc.3.3">
+
+Already the data suggests there is reasonable likelihood the account 
+belongs to him.  However, the most significant piece is the combination -
+ we need to estimate the probability that someone who went to high 
+school in Tillamook ends up in zipcode 97338.  
+To describe our model, we will use the number 80 above as the number of 
+males in the 1977 graduating class, and consider an individual in this 
+roughly 80.  We want to combine the independent probability that this 
+individual had both Boquist<font face="symbol">¢</font>s birthday, and resides in Boquist<font face="symbol">¢</font>s
+ zipcode 35 years later.  
+
+Tillamook is not immediately close to Dallas, they are separated by 
+about an hour twenty minutes drive and over 60 miles.  Note that this is
+ roughly the same distance from Tillamook to Hillsboro, which is a 
+well-populated western suburb of Portand. So the geographic radius 
+centered at Tillamook that includes Dallas would also include 
+significant Portland metropolitan population.  (The total Portland 
+metropolitan population is estimated at 2.7 million.)  However this 
+might not be fair; Portland is culturally different from surrounding 
+rural Oregon areas, so one may expect more mobility between places like 
+Tillamook and Dallas than between Tillamook and Portland.  So we will be
+ generous and exclude the entire Portland area.  (In fact this is even 
+more generous, in 35 years, certainly many Tillamook high graduates have
+ left the state altogether.)   Tillamook is surrounded by a ring of 
+counties with similar demographics.  Polk County, which holds Dallas,  
+is one of the two <font face="symbol">¢</font>kitty-corner<font face="symbol">¢</font> counties in the ring that doesn<font face="symbol">¢</font>t
+ share a border with Tillamook County. One of these counties in 
+Washington County, which is the largest populated because it contains 
+Hillsboro. We will exclude this county.  To be rough, we add the 
+population in this ring of counties, including Tillamook, excluding 
+Washington, and assume, ham-handedly that the Tillamook high school 
+population is dispersed randomly over this ring of counties.    That is,
+ we take Clatsop, Columbia, exclude Washington, Yamhill Polk and 
+Lincoln. Quick wikipedia use (which uses 2010 census data) gives about 
+330,000 people in this area.  Considering that only 20,000 are in 97338,
+ we have only about 6\% probability that a given individual would land 
+in 97338 zipcode.  So the probability that someone who graduated 
+Tillamook High School in 1977 and then lived in 97338 and also had an 
+October 20th birthday is roughly 0.0166\%.
+
+Next we ratchet this number down smaller, by considering weight given. 
+We will again be very generous here, and assume only that the account 
+creator is not obese.  (The metric conversion gives the account creator a
+ healthy weight of 175 lbs.)   Using the statistic that 34\% of 
+Oregonian in the age group 45-64 are obese, we say that this would rule 
+out a third of potential candidates.  In fact the given weight is well 
+below the median, but we will give them room to fudge their profile 
+stats. (It<font face="symbol">¢</font>s also unclear, without more work 
+how much the obesity depends on other factors.) So we multiply the 
+percentage  0.0166 by 0.67 and get about a 0.011\% probability of a 
+match.  At this low number, the Poisson distribution scales nearly 
+linearly over 80 samples, so we can say, quite generously, that there is
+ a 0.9 \% chance that one of Boquist<font face="symbol">¢</font>s male classmates shares his zipcode birthdate, and is also not obese.  
+If we assume that the only other option is that Boquist created the account, this gives us over 99\% confidence.  
+
+
+</a><p><a name="toc.3.3"></a><a name="toc.3.4"></a></p><h2><a name="toc.3.4">3.4&nbsp;ignored factors</a></h2><a name="toc.3.4">
+We make a few comments about factors we ignored.  
+</a><p><a name="toc.3.4"></a><a name="toc.3.4.1"></a></p><h3><a name="toc.3.4.1">3.4.1&nbsp;geocoordinates</a></h3><a name="toc.3.4.1">It<font face="symbol">¢</font>s unclear how Ashley Madison gathered this data, and it<font face="symbol">¢</font>s also unclear how accurate the data would be from a desktop computer in 2011.  We don<font face="symbol">¢</font>t
+ know if the account was set up via a desktop or a mobile phone.  
+According the Google Maps, the given geocoordinates are smack dab in the
+ middle of nowhere, a few yards off perhaps a logging road in Polk 
+County.  There are numerous reasons why someone creating an account 
+would do so away from their own home or work, and we don<font face="symbol">¢</font>t know how this was collected, so we choose to ignore this.
+</a><p><a name="toc.3.4.1"></a><a name="toc.3.4.2"></a></p><h3><a name="toc.3.4.2">3.4.2&nbsp;email address</a></h3><a name="toc.3.4.2"> While we do know that Brian Boquist uses AOL.com (he offers <font face="symbol">¢</font>boquist@aol.com<font face="symbol">¢</font> on his filed complaint), using AOL is to be expected for someone born in 1958. While the name <font face="symbol">¢</font>TrueOregon<font face="symbol">¢</font> does fit the personality of an Oregon politicians who considers themselves a patriot, in our opinion, this isn<font face="symbol">¢</font>t a strong enough factor to try to quantify.  
+</a><p><a name="toc.3.4.2"></a><a name="toc.3.4.3"></a></p><h3><a name="toc.3.4.3">3.4.3&nbsp;ip address</a></h3><a name="toc.3.4.3">
+  This appears to only roughly correspond to geography.  We have no 
+evidence this was used by a particular business or individual. 
+
+</a><p><a name="toc.3.4.3"></a><a name="toc.3.4.4"></a></p><h3><a name="toc.3.4.4">3.4.4&nbsp;Location is <font face="symbol">¢</font>Salem<font face="symbol">¢</font></a></h3><a name="toc.3.4.4">
+ Technically, Salem is not Dallas, and Salem is where Boquist fulfills 
+his duties as State Senator. However, someone using such a website is 
+likely to seek partners in a larger metropolitan area - Dallas is a 
+smaller community, and Salem is the obvious choice. 
+</a><p><a name="toc.3.4.4"></a><a name="toc.3.4.5"></a></p><h3><a name="toc.3.4.5">3.4.5&nbsp;Bayesian priors</a></h3><a name="toc.3.4.5">
+ We are simply assuming that Boquist is equally likely to create an 
+Ashley Madison account as any of his high school classmates.  
+
+
+
+</a><p><a name="toc.3.4.5"></a><a name="toc.4"></a></p><h1><a name="toc.4">4&nbsp;Boquist has made his practice of Catholicism a public issue</a></h1><a name="toc.4"> In a lawsuit </a><a href="#bib.0">[0]</a>
+ aimed and Courtney and others, Boquist claims that he is being punished
+ for using the phrase ``hell is coming to visit you personally.<font face="symbol">¢</font><font face="symbol">¢</font>
+
+The lawsuit includes 
+\beginquote
+ 4.Plaintiff alleges the Defendants are blocking the Plaintiffs practice
+ and expression of religious beliefs stated on the Floor of the Oregon 
+State on July 19, 2019 that are protected under the First Amendment of 
+the United States Constitution. [sic]
+\endquote
+Boquist<font face="symbol">¢</font>s statement was not a threat, he 
+argues,  but a theological statement of faith.  
+The complaint also discusses the fact that Peter Courtney and Boquist 
+attend the same Catholic church:
+
+\beginquote
+25. Prior to August 2018, to build and maintain civil relations, the 
+Plaintiff and Defendant Senate President Peter Courtney met routinely at
+ Ike<font face="symbol">¢</font>s Coffee Shop near the Oregon State 
+Capitol, sometimes nearly weakly. [sic] Both have routinely discussed 
+their catholic religious faith believing in Heaven, Purgatory, and Hell.
+ Those discussions included the fear of Defendant Courtney that a 
+certain Deacon, or Priest, will deny him communion, if not excommunicate
+ him, damning him to Hell for eternity....The weekly Mass recited 
+Penitential Act says we are held accountable for our thoughts and in my 
+words, in what I have done and in what I have failed to do....Catholic 
+Doctrine also says to call out the sinner...
+32.The Plaintiff, a fellow practicing Catholic with Defendant Courtney, 
+does in fact believe President Courtney<font face="symbol">¢</font>s soul is completely lost now.
+\endquote
+
+
+It is clear that Boquist<font face="symbol">¢</font>s catholic faith is an essential part of the lawsuit:  The use of the word ``Hell<font face="symbol">¢</font><font face="symbol">¢</font> is by someone who believes in Hell and fears that his colleague<font face="symbol">¢</font>s
+ soul may end up there.  
+
+Certainly it is well understood that adultery is sinful in the Catholic 
+religion, and punishable by damnation as much as any other sin.  But 
+unless Boquist went through a temporary weak patch in his faith for 
+which he since confessed, a reasonable person would have trouble 
+reconciling an account created for the explicit purposes of adultery and
+ a deep belief in the consequences of sin.  
+
+
+<ol start="0">
+
+
+<a name="bib.0"></a><li value="0"><a name="bib.0">
+   https://www.documentcloud.org/documents/6224280-BOQUIST-v-COURTNEY-ET-AL.html
+   
+
+</a><a name="bib.1"></a></li><li value="1"><a name="bib.1">
+    https://www.zipdatamaps.com/97338
+
+
+</a><a name="bib.2"></a></li><li value="2"><a name="bib.2">
+    https://www.areavibes.com/dallas-or/demographics/ 
+    
+
+</a><a name="bib.3"></a></li><li value="3"><a name="bib.3">
+     https://www.oregon.gov/ode/reports-and-data/students/Documents/dr9798.pdf
+     
+     
+
+</a></li></ol><a name="bib.3">
+
+
+
+
+
+\enddocument
+
+<hr>
+<p></p><h1>Table Of Contents</h1>
+</a><p><a name="bib.3"></a><a href="#toc.1"></a></p><h1><a href="#toc.1">1&nbsp;Background</a></h1>
+<p><a href="#toc.2"></a></p><h1><a href="#toc.2">2&nbsp;The account</a></h1>
+<p><a href="#toc.3"></a></p><h1><a href="#toc.3">3&nbsp;Analysis of the account</a></h1>
+<p><a href="#toc.3.1"></a></p><h2><a href="#toc.3.1">3.1&nbsp;First rough estimation: birthdate and current zipcode</a></h2>
+<p><a href="#toc.3.2"></a></p><h2><a href="#toc.3.2">3.2&nbsp;Second rough estimation: birthdate and Tillamook High School</a></h2>
+<p><a href="#toc.3.3"></a></p><h2><a href="#toc.3.3">3.3&nbsp;Combining birthday with geographic mobility</a></h2>
+<p><a href="#toc.3.4"></a></p><h2><a href="#toc.3.4">3.4&nbsp;ignored factors</a></h2>
+<p><a href="#toc.3.4.1"></a></p><h3><a href="#toc.3.4.1">3.4.1&nbsp;geocoordinates</a></h3>
+<p><a href="#toc.3.4.2"></a></p><h3><a href="#toc.3.4.2">3.4.2&nbsp;email address</a></h3>
+<p><a href="#toc.3.4.3"></a></p><h3><a href="#toc.3.4.3">3.4.3&nbsp;ip address</a></h3>
+<p><a href="#toc.3.4.4"></a></p><h3><a href="#toc.3.4.4">3.4.4&nbsp;Location is <font face="symbol">¢</font>Salem<font face="symbol">¢</font></a></h3>
+<p><a href="#toc.3.4.5"></a></p><h3><a href="#toc.3.4.5">3.4.5&nbsp;Bayesian priors</a></h3>
+<p><a href="#toc.4"></a></p><h1><a href="#toc.4">4&nbsp;Boquist has made his practice of Catholicism a public issue</a></h1>
+
+
+</body></html>
